@@ -20,6 +20,16 @@ This repo contains basic docker images to run Symfony app. If you want to run th
 8. you will probably need to stop images for kibana, redis, elastic to achieve faster responses, but this step is optional 
 9. Populate env vars, in .env file in root of project. Especially you need to add your twitter tokens
 
+Need to be populated env vars: 
+
+```
+DATABASE_URL=mysql://user:password@db:3306/database
+TWITTER_CONSUMER_KEY=placeholder
+TWITTER_CONSUMER_SECRET=placeholder
+TWITTER_ACCESS_TOKEN=placeholder
+TWITTER_ACCESS_TOKEN_SECRET=placeholder
+```
+
 Note: Be aware, that this is only <strong>mere example</strong> thus there is set only this paths:
 
 http://localhost/twitter/list/{content}

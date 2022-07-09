@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Kernel.php'
+
+    App\DDD\Twitter\Infrastructure\TwitterConnector:
+        arguments:
+            $consumerKey: '%env(string:TWITTER_CONSUMER_KEY)%'
+            $consumerSecret: '%env(string:TWITTER_CONSUMER_SECRET)%'
+            $accessToken: '%env(string:TWITTER_ACCESS_TOKEN)%'
+            $accessTokenSecret: '%env(string:TWITTER_ACCESS_TOKEN_SECRET)%'

@@ -1,0 +1,7 @@
+product_detail:
+    path: /product/detail/{id}
+    controller: App\Classic\Controller\ProductController::detail
+
+product_create:
+    path: /product/create/{content}
+    controller: App\Controller\ProductController::create
